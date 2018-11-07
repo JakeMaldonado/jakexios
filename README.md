@@ -18,7 +18,7 @@ this returns the JSON of the request.
 
 Make a DELETE request using:
 
-`let resultJson = await Jakexios.deleteReq(url, headers);`
+`let resultJson = await Jakexios.delete(url, headers);`
 
 this returns the JSON of the request.
 `headers` param is optional.
