@@ -1,5 +1,5 @@
 
-async function get(url, headers) {
+exports.get = async (url, headers) => {
   try {
     if(!headers) {
       let res = await fetch(url);
@@ -18,7 +18,7 @@ async function get(url, headers) {
   }
 }
 
-async function post(url, body, headers) {
+exports.post = async (url, body, headers) => {
   try {
     headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
     let init = {
@@ -35,7 +35,7 @@ async function post(url, body, headers) {
   }
 }
 
-async function deleteReq(url, headers) {
+exports.delete = async (url, headers) => {
   try {
     headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
     let init = {
