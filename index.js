@@ -1,52 +1,55 @@
-
-exports.get = async (url, headers) => {
-  try {
-    if(!headers) {
-      let res = await fetch(url);
+class  Jakexios {
+  async get(url, headers) {
+    try {
+      if(!headers) {
+        let res = await fetch(url);
+        return await res.json();
+      }
+      let init = {
+        method: 'GET',
+        headers: headers
+      }
+      let res = await fetch(url, init);
       return await res.json();
+    } catch (e) {
+      console.log(`error getting: ${url}`);
+      console.log(e);
+      return [];
     }
-    let init = {
-      method: 'GET',
-      headers: headers
+  }
+
+  async post(url, body, headers) {
+    try {
+      headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
+      let init = {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(body)
+      };
+      let res = await fetch(url, init);
+      return await res.json();
+    } catch (e) {
+      console.log(`error posting: ${url}`);
+      console.log(e);
+      return [];
     }
-    let res = await fetch(url, init);
-    return await res.json();
-  } catch (e) {
-    console.log(`error getting: ${url}`);
-    console.log(e);
-    return [];
   }
-}
 
-exports.post = async (url, body, headers) => {
-  try {
-    headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
-    let init = {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(body)
-    };
-    let res = await fetch(url, init);
-    return await res.json();
-  } catch (e) {
-    console.log(`error posting: ${url}`);
-    console.log(e);
-    return [];
+  async delete(url, headers) {
+    try {
+      headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
+      let init = {
+        method: 'DELETE',
+        headers: headers
+      };
+      let res = await fetch(url, init);
+      return await res.json();
+    } catch (e) {
+      console.log(`error deleting: ${url}`);
+      console.log(e);
+      return [];
+    }
   }
-}
+} 
 
-exports.delete = async (url, headers) => {
-  try {
-    headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
-    let init = {
-      method: 'DELETE',
-      headers: headers
-    };
-    let res = await fetch(url, init);
-    return await res.json();
-  } catch (e) {
-    console.log(`error deleting: ${url}`);
-    console.log(e);
-    return [];
-  }
-}
+export default new Jakexios();
