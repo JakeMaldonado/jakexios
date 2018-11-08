@@ -50,6 +50,25 @@ class  Jakexios {
       return [];
     }
   }
+
+  async getHTML() {
+    try {
+      if(!headers) {
+        let res = await fetch(url);
+        return await res.text();
+      }
+      let init = {
+        method: 'GET',
+        headers: headers
+      }
+      let res = await fetch(url, init);
+      return await res.text();
+    } catch (e) {
+      console.log(`error getting: ${url}`);
+      console.log(e);
+      return '';
+    }
+  }
 } 
 
 export default new Jakexios();
