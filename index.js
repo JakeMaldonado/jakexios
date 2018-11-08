@@ -51,7 +51,7 @@ class  Jakexios {
     }
   }
 
-  async getHTML() {
+  async getHtml() {
     try {
       if(!headers) {
         let res = await fetch(url);
