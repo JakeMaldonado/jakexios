@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/JakeMaldonado/jakexios#readme",
   "dependencies": {
-    "node-fetch": "^2.2.1",
+    "node-fetch": "^2.2.1"
   }
 }
