@@ -71,4 +71,4 @@ class  Jakexios {
   }
 } 
 
-export default new Jakexios();
+module.exports.Jakexios = new Jakexios();
