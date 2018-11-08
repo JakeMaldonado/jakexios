@@ -1,3 +1,5 @@
+const fetch = require("node-fetch");
+
 class  Jakexios {
   async get(url, headers) {
     try {
@@ -71,4 +73,8 @@ class  Jakexios {
   }
 } 
 
-module.exports = new Jakexios();
+if (typeof window === 'undefined') {
+  exports.Jakexios = new Jakexios();
+} else {
+  export default Jakexios = new Jakexios();
+}

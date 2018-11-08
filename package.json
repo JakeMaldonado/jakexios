@@ -1,6 +1,6 @@
 {
   "name": "jakexios",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "axios ripoff",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/JakeMaldonado/jakexios/issues"
   },
-  "homepage": "https://github.com/JakeMaldonado/jakexios#readme"
+  "homepage": "https://github.com/JakeMaldonado/jakexios#readme",
+  "dependencies": {
+    "node-fetch": "^2.2.1",
+  }
 }

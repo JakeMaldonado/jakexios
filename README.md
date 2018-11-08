@@ -1,5 +1,16 @@
 # jakexios
 
+## How to install:
+
+npm:
+`npm i jakexios`
+
+require in node:
+`const Jakexios = require('jakexios');`
+
+import in browser:
+`import Jakexios from 'jakexios';`
+
 ### Make a GET request with:
 
 `let resultJson = await Jakexios.get(url, headers);`
