@@ -51,7 +51,7 @@ class  Jakexios {
     }
   }
 
-  async getHtml() {
+  async getHtml(url, headers) {
     try {
       if(!headers) {
         let res = await fetch(url);
@@ -71,4 +71,4 @@ class  Jakexios {
   }
 } 
 
-module.exports.Jakexios = new Jakexios();
+module.exports = new Jakexios();
