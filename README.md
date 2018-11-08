@@ -5,8 +5,7 @@
 npm:
 `npm i jakexios`
 
-require in node:
-`const Jakexios = require('jakexios');`
+## How to import
 
 import in browser:
 `import Jakexios from 'jakexios';`
