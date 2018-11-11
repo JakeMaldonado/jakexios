@@ -1,11 +1,11 @@
 # jakexios
 
-## How to install:
+### How to install:
 
 npm:
 `npm i jakexios`
 
-## How to import
+### How to import
 
 import in browser:
 `import Jakexios from 'jakexios';`
