@@ -20,7 +20,7 @@ class  Jakexios {
 
   async post(url, body, headers) {
     try {
-      headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
+      headers = headers || { "Content-Type": "application/json; charset=utf-8" };
       let init = {
         method: 'POST',
         headers: headers,
@@ -37,7 +37,7 @@ class  Jakexios {
 
   async delete(url, headers) {
     try {
-      headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
+      headers = headers || { "Content-Type": "application/json; charset=utf-8" };
       let init = {
         method: 'DELETE',
         headers: headers
