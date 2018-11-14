@@ -23,7 +23,7 @@ class  Jakexios {
       headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
       let init = {
         method: 'POST',
-        headers: JSON.stringify(headers),
+        headers: headers,
         body: JSON.stringify(body)
       };
       let res = await fetch(url, init);
@@ -40,7 +40,7 @@ class  Jakexios {
       headers && (headers = { "Content-Type": "application/json; charset=utf-8" });
       let init = {
         method: 'DELETE',
-        headers: JSON.stringify(headers)
+        headers: headers
       };
       let res = await fetch(url, init);
       return await res.json();
@@ -59,7 +59,7 @@ class  Jakexios {
       }
       let init = {
         method: 'GET',
-        headers: JSON.stringify(headers)
+        headers: headers
       }
       let res = await fetch(url, init);
       return await res.text();
